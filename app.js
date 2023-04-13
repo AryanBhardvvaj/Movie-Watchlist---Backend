@@ -99,17 +99,19 @@ app.get("/:customlistname",function(req,res){
       const list =new List({
         name:customlistname,
         items: defaultItems
-      });
-      
-  list.save();
-  res.redirect("/"+customlistname);
-    }else{
-      //show a current list
-      res.render("list",{listTitle:foundList.name,newListItems:foundList.items});
-    }
-  });
+      })
+    
+      list.save();
+      res.redirect("/"+customlistname);
 
-  
+    }else{
+        //show a current list
+        res.render("list",{listTitle:foundList.name,newListItems:foundList.items});
+    }
+  })
+  .catch((err)=> {
+    console.log(err);
+  })
 });
 
 // app.get("/work", function(req, res){

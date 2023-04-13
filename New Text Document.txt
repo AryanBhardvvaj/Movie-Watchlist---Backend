@@ -1,0 +1,19 @@
+to combine all together we have to be in directory 
+
+in bash 
+
+git init
+
+then 
+gid add . 
+
+then 
+git commit -m "appname"
+ 
+
+then login to heroku 
+heroku login
+
+the create app by command 
+
+heroku create
