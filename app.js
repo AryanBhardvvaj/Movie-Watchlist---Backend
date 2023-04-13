@@ -20,13 +20,13 @@ const itemSchema = new mongoose.Schema({
 const Item = mongoose.model('Item', itemSchema);
 
 const item1 = new Item({
-  name: 'eat',
+  name: 'Pianist',
 });
 const item2 = new Item({
-  name: 'drink',
+  name: 'Intesteller',
 });
 const item3 = new Item({
-  name: 'sleep',
+  name: 'Stutter Island',
 });
 
 const defaultItems = [item1, item2, item3];
@@ -45,7 +45,7 @@ app.get("/", function(req, res) {
       Item.insertMany(defaultItems);
       res.redirect("/");
     } else {
-      res.render("list", {listTitle: "Today", newListItems: foundItems});
+      res.render("list", {listTitle: "What To Watch", newListItems: foundItems});
     }
   });
 });
@@ -57,7 +57,7 @@ app.post("/", function(req, res){
   const item = new Item({
     name: itemName
   });
-  if(listName==="Today"){
+  if(listName==="What To Watch"){
   item.save();
   res.redirect("/");
 
@@ -76,7 +76,7 @@ app.post("/delete", function(req, res){
   const checkedItemId = req.body.checkbox;
   const listName = req.body.listName;
 
-  if(listName==="Today"){
+  if(listName==="What To Watch"){
     Item.findByIdAndRemove(checkedItemId)
     .then(function(){
       res.redirect("/");

@@ -1,25 +1,24 @@
 html {
-  background-color: #E4E9FD;
-  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+  background-image: url("watchlistbg.jpg");  
   min-height: 1000px;
   font-family: 'helvetica neue';
+  background-size: 100% 100%;
 }
-
 h1 {
-  color: #fff;
+  color: #ffffff;
   padding: 10px;
 }
 
 .box {
   max-width: 400px;
   margin: 50px auto;
-  background: white;
+  background: rgba(255, 255, 255, 0.783);
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
 #heading {
-  background-color: #A683E3;
+  background-color: #302e2ec1;
   text-align: center;
 }
 
@@ -87,10 +86,4 @@ input[type="text"]:focus {
 ::placeholder {
   color: grey;
   opacity: 1;
-}
-
-footer {
-  color: white;
-  color: rgba(0, 0, 0, 0.5);
-  text-align: center;
 }
